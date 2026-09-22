@@ -1,7 +1,7 @@
 > [!CAUTION]
 > This extension was created for educational purposes and has undergone no testing. It is neither supported nor endorsed by PTC.
 
-# CreoJS TypeScript Starter Project
+# Creo.JS TypeScript Starter Project
 
 Tested with **Creo Parametric 12.4.4.0** and **TypeScript 6**.
 
