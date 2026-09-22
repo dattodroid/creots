@@ -1,0 +1,8 @@
+{
+  "name": "creojs-ts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p . && node -e \"require('fs').renameSync('dist/app.js','dist/app.creojs')\""
+  }
+}

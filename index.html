@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="libs/creojs.js"></script>
+    <!--script type="text/creojs" src="libs/browser.creojs"></script-->
+    <script type="text/creojs" src="dist/app.creojs"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="runButton" onclick="runTest()">Run</button>
+    <pre id="output">Click Run to execute...</pre>
+    <script>
+        function runTest() {
+            CreoJS.runApp()
+                .then(
+                    (result) => {
+                        output.textContent =
+                            typeof result === "object"
+                                ? JSON.stringify(result, null, 2)
+                                : String(result)
+                    })
+                .onError(
+                    (err) => output.textContent = JSON.stringify(err, null, 2)
+                )
+                .onException(
+                    (ex) => output.textContent = JSON.stringify(ex, null, 2)
+                )
+        }
+    </script>
+</body>
+
+</html>
